@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function node(value){
+        this.value = value;
+        this.next = null;
+    }
+
+    const n1=new node("a");
+    const n2=new node("s");
+    const n3=new node("h");
+    const n4=new node("i");
+    const n5=new node("s");
+    const n6=new node("h");
+
+    n1.next=n2;
+    n2.next=n3;
+    n3.next=n4;
+    n4.next=n5;
+    n5.next=n6;
+
+function pelandrome(head){
+    let curr=head;
+    let arr=[];
+    while(curr!=null){
+        arr.push(curr.value);
+        curr=curr.next;
+    }
+    return arr.join("") === arr.reverse().join("");
+}
+console.log(pelandrome(n1));
+</script>
