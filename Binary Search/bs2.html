@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function bs(arr,target,s,e){
+
+        if(s>e && target!=arr.value){
+            return -1;
+        }
+
+
+        let mid = Math.round((s+e)/2)
+
+        if(arr[mid] === target){
+            return mid;
+        }
+
+        if(arr[mid] < target){
+            return bs(arr,target,mid+1,e);
+        }else{
+            return bs(arr,target,s,mid-1)
+        }
+
+    }
+    
+    let arr=[10, 30 , 60 , 89 , 99 , 105 , 120]
+
+   
+    console.log(bs(arr,6,0,arr.length-1));
+</script>
