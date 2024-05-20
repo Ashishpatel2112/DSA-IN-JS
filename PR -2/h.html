@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+              <img src="https://webextheme.com/wp/nextech/wp-content/themes/nextech/assets/images/logo-light.svg" alt="">
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <img src="https://webextheme.com/wp/nextech/wp-content/themes/nextech/assets/images/logo-light.svg" alt="">
+              
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <img src="https://webextheme.com/wp/nextech/wp-content/themes/nextech/assets/images/logo-light.svg" alt="">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+              </button>
+      
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </button>
+                </div>
+      
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+          </div>
+        </div>
+      </nav>
+      
+    <div class="hero flex flex-col justify-center align-items-center">
+        
+        <div class="container-fluid d-flex justify-center align-items-center">
+            <div class="row d-flex justify-center align-items-center row-1 px-40">
+                <div class="hero-image col-6">
+
+                </div>
+                <div class="effect col-1">
+
+                </div>
+                <div class="info d-flex flex-col justify-around col-5">
+                    <h2 class="title"> Digital Agency <br> &amp; IT Solutions</h2>
+                    <div class="webex-plain-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit condimentum
+                        purus molestie dignissim maecenas vulputate ultrices tellus vivamus quisque congue magnis</div>
+
+                    <div class="risk d-flex  align-items-center gap-10">
+                        <div class="img1">
+
+                        </div>
+                        <div class="imgtext">
+                            <ul type="none">
+                                <li>
+                                    <i class="fa-solid fa-check" id="check"></i><span class="list-text">Risk Management
+                                        Solutions</span>
+                                </li>
+                                <li> <i class="fa-solid fa-check" id="check"></i><span class="list-text">Ensure Next
+                                        Level Work Delivery</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="effect2"></div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="hero2 container-fluid d-flex justify-content-between align-items-center mb-2">
+        <div class="container-fluid">
+            <div class="row justify-around flex">
+                <div class="col-xxl-6 col-lg-8 col-md-8 col-sm-4 col-4 d-flex side-img ">
+                    <div class="call-us-now text-center">
+                        <h3>25+</h3> 
+                        <p>Years Of <br> Experiences</p>
+                    </div>
+                    <div class="tilt-box-wrap">
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <span class="t_over"></span>
+                        <div class="tilt-box img2">
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-6 col-xxl-6 col-xl-8 col-md-8 col-sm-12 flex  flex-col">
+                    <div class="subtitle">
+                        <span class="side-line-left"></span>
+                        <span style="color: white;font-weight: bold;">Our Company History</span>
+                    </div>
+                    <br>
+                    <h2 class="title fw-bold"> Creative Digital Agency Marketing & IT Solution Services</h2>
+                    <br>
+                    <div class="webex-plain-text">Distinctively exploit optimal alignments coordinate business
+                        applications through revolutionary ornare pretium a in dictumst mollis</div>
+                    <br>
+                    <div class="digital">
+                        <div class="up flex justify-between"><span>digital Agency </span> <span
+                                class="amount">88%</span></div>
+                        <br>
+                        <div class="bar-inner">
+                            <div class="bar-progress-line">
+
+                            </div>
+                            <br>
+                            <div class="up flex justify-between"><span>IT Solutions</span> <span
+                                    class="amount">75%</span></div>
+                            <br>
+                            <div class="bar-inner1">
+                                <div class="bar-progress-line1">
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="a1 d-flex">
+                                <div
+                                    class="nextech-contact-info justify-content-center align-items-center d-flex justify-content-around">
+                                    <div class="icon justify-content-center align-items-center d-flex">
+                                        <i class="fa-solid fa-phone-volume" id="icons"></i>
+                                    </div>
+                                    <div class="icon-text justify-content-center align-items-start d-flex flex-column">
+
+                                        <a href="">call us</a>
+                                        <span> +012 (345) 678 </a></span>
+                                    </div>
+                                </div>
+                                <div class="about flex justify-center items-center">
+                                    <a href="">About us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid hero-3 pt-[100px] bg-black flex-col justify-center items-center flex mb-3">
+        <div class="container ">
+            <div class="row">
+                <div class="start flex justify-between items-center">
+                    <div class="side-left">
+                        <div class="service-1  rounded-2xl flex justify-center items-center">
+                            <h6 class="subtitle sub-title-line-bottom" id="subtitle">
+                                Services We Porovides
+                            </h6>
+                        </div>
+
+                        <h2 class="h2">Our Services</h2>
+                    </div>
+                    <div class="right">
+                        <div class="p"> Lorem ipsum dolor sit amet consectetur adipiscing augue
+                            curae duis pellentesque proin, quam faucibus accumsan feugiat donec aliquet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 w-[100%]  justify-center flex items-center">
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-7" id="photo-1">
+                    <div class="icon1 flex justify-center items-center">
+                        <img src="incandescent-light-bulb.png" alt="">
+                    </div>
+                    <div class="service-item flex  items-center justify-start ">
+                        <div class="service-text">
+                            <h6 class="services-subtitle">Technoloy</h6>
+
+                            <a href="">IT Solutions</a>
+                        </div>
+
+                        <div class="side-bulb1">
+                            <img src="incandescent-light-bulb.png" alt="" id="bulb1">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class=" col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-7" id="photo-2">
+                    <div class="icon1 flex justify-center items-center">
+                        <img src="drawing.png" alt="">
+                    </div>
+                    <div class="service-item flex  items-center justify-start ">
+                        <div class="service-text">
+                            <h6 class="services-subtitle">design</h6>
+
+                            <a href="">UI/UX design</a>
+                        </div>
+
+                        <div class="side-bulb1">
+                            <img src="drawing.png" alt="" id="bulb1">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-7" id="photo-3">
+                    <div class="icon1 flex justify-center items-center">
+                        <img src="globe.png" alt="">
+                    </div>
+                    <div class="service-item flex  items-center justify-start ">
+                        <div class="service-text">
+                            <h6 class="services-subtitle">Networking</h6>
+
+                            <a href="">Network Security</a>
+                        </div>
+
+                        <div class="side-bulb">
+                            <img src="globe.png" alt="" id="bulb2">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-7 " id="photo-4">
+                    <div class="icon1 flex justify-center items-center">
+                        <img src="home (2).png" alt="">
+                    </div>
+                    <div class="service-item flex  items-center justify-start ">
+                        <div class="service-text">
+                            <h6 class="services-subtitle">Creative</h6>
+
+                            <a href="">Creative Art</a>
+                        </div>
+
+                        <div class="side-bulb1">
+                            <img src="home (2).png" alt="" id="bulb1">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="show-all flex justify-center items-center">
+            <div class="top-div">
+
+            </div>
+            <h6 class="text font-bold"> There are some top services showcase <span><a href="" class="btn-link">Show
+                        All</a></span></h6>
+            <div class="bottom-div">
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container-fliud bg-black pt-[50px] pb-[100px] w-[100%] flex justify-around flex-col">
+        <div class="container flex justify-center items-center mt-2">
+            <div class="title-box h-[100px] w-[100%] flex flex-col justify-center items-center mt-2">
+                <div class="behind-text h-[100px]">
+                    <span>Working</span>
+                </div>
+                <h6 class="subtitle1 flex items-center justify-center">
+                    <a href=""> how we works </a>
+                </h6>
+                <h2 class="title1"> Our Easy Working Steps</h2>
+
+            </div>
+        </div>
+        <div class="row  w-[100%] gap-6 flex justify-center items-center mt-[50px]">
+            <div class="process-item col-4  flex justify-center items-center flex-col">
+                <div class="process-icon flex justify-center items-center mb-2">
+                    <div class="process-count flex justify-center items-center">
+                        <span class="count-1">01</span>
+                    </div>
+                    <div class="zoom">
+
+                    </div>
+                    <img src="helmate.png" alt="">
+                </div>
+                <div class="process-details text-center">
+                    <h4 class="process-title">Visit Project</h4>
+                    <p class="process-text">Lorem ipsum dolor sit amet consect adicing aliquam</p>
+                </div>
+            </div>
+            <div class="process-item col-4  flex justify-center items-center flex-col">
+                <div class="process-icon flex justify-center items-center mb-2">
+                    <div class="process-count flex justify-center items-center">
+                        <span class="count-1">02</span>
+                    </div>
+                    <div class="zoom">
+
+                    </div>
+                    <img src="enginer@3x.png" alt="">
+                </div>
+                <div class="process-details text-center">
+                    <h4 class="process-title"> Planning Design</h4>
+                    <p class="process-text">Lorem ipsum dolor sit amet consect adicing aliquam</p>
+                </div>
+            </div>
+            <div class="process-item col-4  flex justify-center items-center flex-col">
+                <div class="process-icon flex justify-center items-center mb-2">
+                    <div class="process-count flex justify-center items-center">
+                        <span class="count-1">03</span>
+                    </div>
+                    <img src="Screenshot 2024-04-08 135022.png" alt="">
+                </div>
+                <div class="process-details text-center">
+                    <h4 class="process-title"> Project Sketch</h4>
+                    <p class="process-text">Lorem ipsum dolor sit amet consect adicing aliquam</p>
+                </div>
+            </div>
+            <div class="process-item col-4  flex justify-center items-center flex-col">
+                <div class="process-icon flex justify-center items-center mb-2">
+                    <div class="process-count flex justify-center items-center">
+                        <span class="count-1">04</span>
+                    </div>
+                    <div class="zoom">
+                    </div>
+                    <img src="Screenshot 2024-04-08 135521.png" alt="">
+                </div>
+                <div class="process-details text-center">
+                    <h4 class="process-title"> Start Working</h4>
+                    <p class="process-text">Lorem ipsum dolor sit amet consect adicing aliquam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-4 container-fluid h-[1167px] w-[100%] bg-black flex justify-center">
+        <div class="container-fluid flex gap-4 items-center flex-col">
+            <div class="title-box h-[100px] w-[100%] flex flex-col justify-center items-center mt-2">
+
+                <h6 class="subtitle1 flex items-center justify-center">
+                    <a href=""> Work Portfolio</a>
+                </h6>
+                <h2 class="title1"> Our Recent Works</h2>
+
+            </div>
+
+            <div class="row h-[173px] w-[100%] justify-center work1 flex items-center">
+                <div class="project-list flex items-center  justify-around">
+                    <div class="project-title1"></div>
+                    <h4 class="project-title">Business Consulting</h4>
+                    <div class="catagory flex justify-center items-center">
+                        <a href="">consulting</a>
+                    </div>
+                    <div class="project-thumb">
+                        <img src="https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/ai1-315x370.jpg" alt="">
+                    </div>
+                    <h4 class="project-title-shadow ">Business Consulting</h4>
+
+                    <div class="icon-side">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row h-[173px] w-[100%] justify-center work1 flex items-center">
+                <div class="project-list flex items-center  justify-around">
+                    <div class="project-title1"></div>
+                    <h4 class="project-title">Network Security</h4>
+                    <div class="catagory flex justify-center items-center">
+                        <a href="">Networking</a>
+                    </div>
+                    <div class="project-thumb">
+                        <img src="https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/ai7-315x370.jpg" alt="">
+                    </div>
+                    <h4 class="project-title-shadow1 flex justify-end">Network Security</h4>
+
+                    <div class="icon-side">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row h-[173px] w-[100%] justify-center work1 flex items-center ">
+                <div class="project-list flex items-center  justify-around">
+                    <div class="project-title1"></div>
+                    <h4 class="project-title">3D Illustration</h4>
+                    <div class="catagory flex justify-center items-center">
+                        <a href="" class="">Branding</a>
+                    </div>
+                    <div class="project-thumb">
+                        <img src="https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/ai3-315x370.jpg" alt="">
+                    </div>
+                    <h4 class="project-title-shadow1 justify-end flex">3D Illustration</h4>
+                    <div class="icon-side">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row h-[173px] w-[100%] justify-center work1 flex items-center">
+                <div class="project-list flex items-center  justify-around">
+                    <div class="project-title1"></div>
+                    <h4 class="project-title">Creative Design</h4>
+                    <div class="catagory flex justify-center items-center">
+                        <a href="">Creative</a>
+                    </div>
+                    <div class="project-thumb">
+                        <img src="https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/ai02-315x370.jpg" alt="">
+                    </div>
+                    <h4 class="project-title-shadow1 flex justify-end">Creative Design</h4>
+
+                    <div class="icon-side">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="hero4  w-[100%] flex justify-center items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-md-12 col-sm-12 hero-col">
+                    <div class="subtitle h-[30px] w-[100%] flex items-center">
+                        <div class="side-line-left w-{100px} ">
+                            <span></span>
+                            <a></a>
+                        </div>
+                        <div class="side-text">
+                            <span>
+                                our success
+                            </span>
+                        </div>
+                    </div>
+
+                    <h3 class="why font-bold">Why Chosse Us?</h3>
+                    <br>
+                    <div class="icon-box w-[100%] h-[119px] flex ">
+                        <div class="featured-icon flex justify-center items-center w-[80px] h-[80px] rounded-lg">
+                            <img src="incandescent-light-bulb.png" alt="">
+                        </div>
+                        <div class="icon-details flex-col justify-around">
+                            <h5 class="icon-box-title">Creative Design Idea</h5>
+                            <p class="icon-box-desc">Quickly productivate time strategic mirina magna viverra elementum
+                                suscipit blandit imperdiet taciti auctor pulvinar posuere primis congue</p>
+                        </div>
+                    </div>
+                    <div class="icon-box w-[100%] h-[119px] flex ">
+                        <div class="featured-icon flex justify-center items-center w-[80px] h-[80px] rounded-lg">
+                            <i class="fa-solid fa-user-secret"></i>
+                        </div>
+                        <div class="icon-details flex-col justify-around">
+                            <h5 class="icon-box-title">Skilled Team Members</h5>
+                            <p class="icon-box-desc">Quickly productivate time strategic mirina magna viverra elementum
+                                suscipit blandit imperdiet taciti auctor pulvinar posuere primis congue</p>
+                        </div>
+                    </div>
+                    <div class="icon-box w-[100%] h-[119px] flex ">
+                        <div class="featured-icon flex justify-center items-center w-[80px] h-[80px] rounded-lg">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <div class="icon-details flex-col justify-evenly">
+                            <h5 class="icon-box-title">24/7 Instant Support</h5>
+                            <p class="icon-box-desc">Quickly productivate time strategic mirina magna viverra elementum
+                                suscipit blandit imperdiet taciti auctor pulvinar posuere primis congue</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-md-12 col-sm-12">
+                    <div class="subtitle h-[30px] w-[100%] flex items-center">
+                        <div class="side-line-left w-{100px} ">
+                            <span></span>
+                            <a></a>
+                        </div>
+                        <div class="side-text">
+                            <span>
+                                Common FAQ's
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="why font-bold"> Frequently Asked Questions</h3>
+                    <div>
+                        <div class="accordian flex items-center h-[83px] w-[100%] mb-4 mt-3">
+                            <div class="accordian-item-1 h-[83px] w-[100%] flex items-center px-[25px]">
+                                <div class="accordian-icon flex justify-center items-center rounded-lg">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <h5 class="accordian-title text-[18px] m-[20px] text-[white] font-bold"> What do you
+                                    need
+                                    from me and my team?</h5>
+                            </div>
+                        </div>
+                        <div class="accordian-body h-[148px] w-[100%] p-[30px] rounded-lg ">
+                            <p class="description">Congue himenaeos curae leo dis maecenas a laoreet dictum bibendum ut
+                                mollis, erat tortor fermentum viverra lacinia cursus accumsan, elementum et suscipit
+                                blandit imperdiet taciti auctor. Commodo sapien dignissim aptent</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="accordian flex items-center h-[83px] w-[100%] mb-4">
+                            <div class="accordian-item-1 h-[83px] w-[100%] flex items-center px-[25px]">
+                                <div class="accordian-icon flex justify-center items-center rounded-lg">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <h5 class="accordian-title text-[18px] m-[20px] text-[white] font-bold"> What do you
+                                    need
+                                    from me and my team?</h5>
+                            </div>
+                        </div>
+                        <div class="accordian-body h-[148px] w-[100%] p-[30px] rounded-lg ">
+                            <p class="description">Congue himenaeos curae leo dis maecenas a laoreet dictum bibendum ut
+                                mollis, erat tortor fermentum viverra lacinia cursus accumsan, elementum et suscipit
+                                blandit imperdiet taciti auctor. Commodo sapien dignissim aptent</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="accrdian flex items-center h-[83px] w-[100%]">
+                            <div class="accordian-item-1 h-[83px] w-[100%] flex items-center px-[25px]">
+                                <div class="accordian-icon flex justify-center items-center rounded-lg">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <h5 class="accordian-title text-[18px] m-[20px] text-[white] font-bold"> What do you
+                                    need
+                                    from me and my team?</h5>
+                            </div>
+                        </div>
+                        <div class="accordian-body h-[148px] w-[100%] p-[30px] rounded-lg ">
+                            <p class="description">Congue himenaeos curae leo dis maecenas a laoreet dictum bibendum ut
+                                mollis, erat tortor fermentum viverra lacinia cursus accumsan, elementum et suscipit
+                                blandit imperdiet taciti auctor. Commodo sapien dignissim aptent</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-5 pt-[100px] pb-[100px] w-[100%] flex items-center bg-black mt-2">
+        <div class="container1  w-[100%] flex justify-center flex-col items-center">
+            <div class="e-con-inner w-[100%] h-[172px] flex items-center justify-center  relative">
+                <div class="object-item">
+                    <img src="https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/star1-1.png" alt="">
+                </div>
+                <div class="members  w-[682px]  flex justify-center items-center flex-col">
+
+                    <div class="member-button flex justify-center items-center">
+                        <a href="">Team Members</a>
+                    </div>
+                    <h2 class="title text-center">Our Dedicated Team Members</h2>
+                </div>
+
+            </div>
+            <div class="row  w-[100%] gap-6 justify-center">
+                <div class="col-4 flex justify-end items-end" id="member-1">
+
+                    <div class="member-item flex  items-center  justify-around ">
+                        <div class="service-text">
+                            <h6 class="member-subtitle font-bold">Jacob Martin</h6>
+                            <h6 class="team-designation"> Web Developer</h6>
+                        </div>
+
+                        <div class="member-icon flex justify-center items-center">
+                            <i class="fa-regular fa-share-from-square"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 flex justify-end items-end" id="member-2">
+
+                    <div class="member-item flex  items-center  justify-around ">
+                        <div class="service-text">
+                            <h6 class="member-subtitle font-bold"> Alica Bendor </h6>
+                            <h6 class="team-designation"> Interior Designer</h6>
+                        </div>
+
+                        <div class="member-icon flex justify-center items-center">
+                            <i class="fa-regular fa-share-from-square"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 flex justify-end items-end" id="member-3">
+
+                    <div class="member-item flex  items-center  justify-around ">
+                        <div class="service-text">
+                            <h6 class="member-subtitle font-bold"> Sebastian Turner</h6>
+                            <h6 class="team-designation"> Web Developer</h6>
+                        </div>
+
+                        <div class="member-icon flex justify-center items-center">
+                            <i class="fa-regular fa-share-from-square"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12  flex justify-end items-end" id="member-4">
+
+                    <div class="member-item flex  items-center  justify-around ">
+                        <div class="service-text">
+                            <h6 class="member-subtitle font-bold"> Robert Tylor</h6>
+                            <h6 class="team-designation"> Web Developer</h6>
+                        </div>
+
+                        <div class="member-icon flex justify-center items-center">
+                            <i class="fa-regular fa-share-from-square"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="hero-6 pt-[100px] pb-[100px] w-[100%] flex justify-center items-center bg-black">
+        <div class="container">
+            <div class="news h-[108px] w-[100%] flex">
+                <div class="news-left h-[108px] w-[50%]">
+                    <div class="subtitle h-[30px] w-[100%] flex items-center">
+                        <div class="side-line-left w-{100px}">
+                            <span></span>
+                            <a></a>
+                        </div>
+                        <div class="side-text">
+                            <span>
+                                News & Updates
+                            </span>
+                        </div>
+
+                    </div>
+                    <h3 class="why font-bold">Latest News</h3>
+                </div>
+                <div class="news-right h-[108px] w-[50%] justify-end items-center flex px-3">
+                    <div class="all-news flex justify-center items-center">
+                        <a href="">All News</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row  flex justify-center items-center">
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12" id="news-1">
+                    <div class="news-img h-[332px] ">
+                        <div class="news-button flex justify-center items-center">
+                            <a href="">painting</a>
+
+                        </div>
+                    </div>
+                    <div class="news-description flex flex-col justify-around h-[252px] w-[100%]">
+                        <div class="news-top-meta h-[30px] w-[100%] flex ">
+                            <div class="name h-[30px]">
+                                <i class="fa-solid fa-user px-1"></i> wxtheme
+                            </div>
+                            <a href=""><i class="fa-solid fa-calendar-days px-1"></i> Jan 29, 2024 </a>
+                        </div>
+                        <a href="" class="text-[22px] text-white font-bold">Announces Partnership with Technology
+                            Effective On
+                            Migration</a>
+                        <br>
+                        <div class="about-news flex justify-center items-center">
+                            <a href="" class="font-bold text-white text-[18px]">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 " id="news-1">
+                    <div class="news-img-1 h-[332px] ">
+                        <div class="news-button flex justify-center items-center">
+                            <a href="">Agency</a>
+
+                        </div>
+                    </div>
+                    <div class="news-description flex flex-col justify-around h-[252px] w-[100%]">
+                        <div class="news-top-meta h-[30px] w-[100%] flex ">
+                            <div class="name h-[30px]">
+                                <i class="fa-solid fa-user px-1"></i> wxtheme
+                            </div>
+                            <a href=""><i class="fa-solid fa-calendar-days px-1"></i> Jan 29, 2024 </a>
+                        </div>
+                        <a href="" class="text-[22px] text-white font-bold">The Benefits and Challenges of
+                            Infrastructure as Code
+                        </a>
+                        <br>
+                        <div class="about-news flex justify-center items-center">
+                            <a href="" class="font-bold text-white text-[18px]">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 " id="news-1">
+                    <div class="news-img-2 h-[332px] ">
+                        <div class="news-button flex justify-center items-center">
+                            <a href="">painting</a>
+                        </div>
+                    </div>
+                    <div class="news-description flex flex-col justify-around h-[252px] w-[100%]">
+                        <div class="news-top-meta h-[30px] w-[100%] flex ">
+                            <div class="name h-[30px]">
+                                <i class="fa-solid fa-user px-1"></i> wxtheme
+                            </div>
+                            <a href=""><i class="fa-solid fa-calendar-days px-1"></i> Jan 29, 2024 </a>
+                        </div>
+                        <a href="" class="text-[22px] text-white font-bold">Ready Works Announces Partnership with
+                            Technology</a>
+                        <br>
+                        <div class="about-news flex justify-center items-center">
+                            <a href="" class="font-bold text-white text-[18px]">Read More</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-[578px] w-[100%] hero-7 bg-black flex flex-col justify-center items-center text-center">
+        <h2 class="text-[110px] font-bold text-white">Let's Work <br>Together</h2>
+
+        <div class="contect-news flex justify-center items-center mt-5">
+            <a href="" class="font-bold text-white text-[18px]">Contact With Us</a>
+        </div>
+    </section>
+
+    <footer class="h-[579px] w-[100%] flex justify-center items-center">
+        <div class="container">
+            <div class="row flex justify-center items-center">
+                <div class="col-xl-4 col-lg-6">
+                    <h5 class="widget-title text-white font-bold">Newsletter</h5>
+
+                    <div class="line mt-2">
+
+                    </div>
+                    <p class="mrb-30 mt-3 text-[#bbb7c2] mb-3">Seamlessly visualize quality intellectual ideal <br>
+                        without
+                        collaboration superior
+                        montes soon <br>maecenas capita idea listically</p>
+                    <div class="email h-[60px] w-[422px]">
+                        <input type="text" name="" id="" class=" w-[382px] h-[60px] border-none"
+                            placeholder="Enter Your email">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 p-0">
+                    <h5 class="widget-title text-white font-bold">Services</h5>
+
+                    <div class="line mt-2">
+
+                    </div>
+                    <ul type="none" class="flex flex-col arrows p-0 mt-3">
+                        <li><i class="ri-arrow-right-line"></i> <a href="">App Development</a></li>
+                        <li><i class="ri-arrow-right-line"></i><a href=""> 3D Illustration </a></li>
+                        <li><i class="ri-arrow-right-line"></i> <a href="">Graphic Design</a></li>
+                        <li><i class="ri-arrow-right-line"></i> <a href="">Branding Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-4 p-0">
+                    <h5 class="widget-title text-white font-bold">Contact</h5>
+
+                    <div class="line mt-2">
+
+                    </div>
+                    <ul type="none" class="flex flex-col arrows1 p-0 mt-3">
+                        <li> <a href="">
+                                <p>32 Dora Creek, tuntable creek, New South Wales 2480, Australia</p>
+                            </a>
+                        </li>
+
+                        <li><i class="fa-solid fa-phone"></i> &nbsp; <a href="">"+02251145558"</a></li>
+
+                        <li><i class="fa-solid fa-envelope"></i> &nbsp; <a href="">Graphic Design</a></li>
+                        <li> <i class="fa-solid fa-globe"></i> &nbsp; <a href="">Branding Design</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script .0 src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

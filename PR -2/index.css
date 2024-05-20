@@ -1,0 +1,1725 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+
+
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --webex-secondary-color: #13151f;
+    --text-white: #fff;
+    --text-black: #091217;
+    --text-gray: #8b827d;
+    --text-blue: #447bde;
+    --text-light-gray: #a7a8b4;
+    --text-silver: #f5f3f1;
+    --text-gray-light: #ccc;
+    --text-dark-light: #808093;
+    --bg-white: #fff;
+    --bg-light-pink: #faf3f3;
+    --bg-silver: #f4f4f7;
+    --bg-silver-light: #f8f4f3;
+    --bg-silver-light2: #f0f1f7;
+    --bg-silver-deep: #ecdaee;
+    --bg-gray: #f7f7f7;
+    --bg-dark-color: #13151f;
+    --bg-blue-color: #0293ce;
+    --gradient-color1: #12d5bb;
+    --gradient-color2: #1ca5f1;
+    --gradient-color3: #6c5ce7;
+    --gradient-color4: #0c8ce9;
+    --webex-primary-color: #2374dd;
+    --box-shadow: 6px 6px 25px 0px rgba(0, 0, 0, .08);
+    --text-gradient-color: linear-gradient (15deg,
+            var(--gradient-color4) 15%,
+            var(--gradient-color3) 10%,
+            var(--gradient-color1) 45%,
+
+
+            var(--gradient-color2) 130%) 100% / 120% 120%;
+}
+
+.hero {
+    /* height: 100vh; */
+    width: 100%;
+    padding: 200px 0px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/home-bg4.jpg);
+    border: 1px solid black;
+}
+
+.row-1 {
+    width: 100%;
+}
+
+.header_info {
+    height: 48px;
+    width: 48px;
+    border: 1px solid red;
+
+    background-color: linear-gradient(30deg, (#0c8ce9)0%, (#12d5bb)15%, (#12d5bb)20%(#0c8ce9)95%);
+
+
+}
+
+.side {
+    height: 50px;
+    width: 200px;
+    /* background-color: yellow; */
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    line-height: 5px;
+
+}
+
+.sidetext {
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 1px solid red; */
+    padding-top: 8px;
+    width: 150px;
+    border: 1px solid red;
+    height: 30px;
+    line-height: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidetext p {
+    font-size: 14px;
+}
+
+.sidetext h5 {
+    font-size: 16px;
+}
+
+.hero-image {
+    height: 580px;
+    width: 280px;
+    z-index: 2;
+    border-radius: 146px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/ab11.jpg);
+}
+
+.effect {
+    width: 400px;
+    left: -220px;
+    position: relative;
+    top: -159px;
+    height: 400px;
+    /* border: 1px solid red; */
+    opacity: .65;
+    z-index: 1;
+    animation-duration: 1s;
+    border-radius: 50%;
+    animation: pulse infinite 1s;
+    background-size: 400px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/Ellipse-3.png);
+}
+
+.info {
+    height: 525px;
+    /* width: 699px; */
+    /* border: 1px solid red; */
+}
+
+.title {
+    font-size: 84px;
+    color: white;
+    font-weight: bold;
+}
+
+.webex-plain-text {
+    font-size: 22px;
+    color: white;
+}
+
+.img1 {
+    height: 92px;
+    width: 217px;
+    /* border: 1px solid red; */
+    border-radius: 115px;
+    background-size: cover;
+    background: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/about-l3-img1.jpg);
+}
+
+#check {
+    color: white;
+    font-size: 18px;
+}
+
+.list-text {
+    color: white;
+    margin-left: 15px;
+}
+
+.effect2 {
+    width: 200px;
+    left: -190px;
+    position: relative;
+    top: -169px;
+    /* border: 1px solid red; */
+    height: 200px;
+    opacity: .1;
+    z-index: 1;
+    animation-duration: 1s;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 15s;
+    /* animation-delay: 5s; */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-size: 200px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/star2.png);
+}
+
+.funfact-block {
+    /* padding: 50px 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fact-span {
+    color: #10c1c8;
+    font-size: 64px;
+}
+
+.hero2 {
+    /* height: 831px; */
+    padding: 100px 0px 200px 0px;
+    width: 100%;
+    background-color: #000;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/Vector21.png);
+}
+
+.call-us-now {
+    width: 187px;
+    height: 200px;
+    /* border: 1px solid red; */
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+    left: -80px;
+    top: 60px;
+}
+
+.call-us-now h3 {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+
+.call-us-now p {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+.side-img {
+    height: 591px;
+    background-size: cover;
+    width: 500px;
+    border-radius: 15px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/14-545x645.jpg);
+}
+
+.side-line-left::before {
+    content: "";
+    height: 2px;
+    width: 50px;
+    position: relative;
+    left: 0;
+    bottom: 8px;
+    background: white;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+}
+
+.side-line-left::after {
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 50px;
+    background: white;
+    left: 10px;
+    bottom: 12px
+}
+
+.title {
+    font-size: 48px;
+}
+
+.webex-plain-text {
+    font-size: 18px;
+    color: #bdbcbf;
+}
+
+.digital {
+    height: 50px;
+    width: 100%;
+}
+
+.digital span {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.amount {
+    font-size: 14px;
+    color: #bcbcbf;
+    font-weight: bold;
+}
+
+.bar-inner {
+    height: 11px;
+    width: 100%;
+    background-color: #0C89CD40;
+    border-radius: 30px
+}
+
+.bar-progress-line {
+    background-color: #0ccdca;
+    border-radius: 30px;
+    width: 85%;
+    height: inherit;
+}
+
+.bar-inner1 {
+    height: 11px;
+    width: 100%;
+    background-color: #0C89CD40;
+    border-radius: 30px
+}
+
+.bar-progress-line1 {
+    background-color: #0ccdca;
+    border-radius: 30px;
+    width: 75%;
+    height: inherit;
+}
+
+.a1 {
+    height: 56px;
+    width: 100%;
+
+}
+
+.nextech-contact-info {
+    width: 204px;
+    height: inherit;
+}
+
+.icon {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+
+}
+
+#icons {
+    color: white;
+    font-size: 22px;
+}
+
+.icon-text {
+    width: 135px;
+    height: inherit;
+}
+
+.icon-text a {
+    text-decoration: none;
+    color: #bcbcbf;
+    font-size: 16px;
+}
+
+.icon-text span {
+    font-size: 18px;
+    color: white;
+}
+
+.about {
+    height: 56px;
+    width: 176px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 40px;
+    margin-left: 25px;
+}
+
+.about a {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.start {
+    height: 122px;
+    width: 100%;
+}
+
+.side-left {
+    height: inherit;
+    /* width: 512px; */
+}
+
+.service-1 {
+    background-color: #0C89CD40;
+    height: 28px;
+    width: 226px;
+}
+
+.h2 {
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+
+#subtitle {
+
+    background-color: var(--text-gradient-color);
+    color: white;
+}
+
+.right {
+    height: inherit;
+    width: 664px;
+    padding: 20px;
+}
+
+.p {
+    color: #bdbcbf;
+    font-size: 18px;
+}
+
+#photo-1 {
+    height: 417px;
+    /* width: 352px; */
+    background-size: cover;
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/s11-355x420.jpg);
+}
+
+.icon1 {
+    position: relative;
+    top: 40px;
+    left: 220px;
+    height: 82px;
+    width: 82px;
+    border-radius: 15px;
+
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+}
+
+.icon1 img {
+    height: 48px;
+    width: 48px;
+}
+
+#photo-1:hover .icon1 {
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transition-duration: 2s;
+
+}
+
+#photo-1:hover .icon1 img {
+    transform: rotateY(360deg);
+    transition-duration: 1s;
+}
+
+#photo-1:hover {
+    background-color: #13151f;
+    /* z-index: 3; */
+    filter: brightness(1.3);
+    -moz-transition: all .6s ease-out 0s;
+    -webkit-transition: all .6s ease-out 0s;
+    -ms-transition: all .6s ease-out 0s;
+    -o-transition: all .6s ease-out 0s;
+    transition: all .6s ease-out 0s;
+
+}
+
+#bulb {
+    font-size: 42px;
+    color: white;
+}
+
+
+.service-item {
+    padding-left: 25px;
+    height: 104px;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, .09);
+    background: linear-gradient(290deg, #100e33, #04222f);
+    border-radius: 15px;
+    position: relative;
+    top: 200px;
+    left: 0;
+    right: 0;
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 4;
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -moz-transition: all .4s ease-out 0s;
+    -webkit-transition: all .4s ease-out 0s;
+    -ms-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s
+}
+
+.service-item::after {
+    content: "";
+    background: linear-gradient(47deg, #1545e2, #08ca92);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: 46px;
+    right: 20px;
+    opacity: .4;
+    z-index: -2;
+    filter: blur(30px);
+    transition: .4s
+}
+
+.services-subtitle {
+    color: var(--bs-orange);
+    font-weight: bold;
+}
+
+.service-item a {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.side-bulb1 {
+    position: relative;
+    left: 80px;
+    /* top: -20px; */
+    bottom: -10px;
+}
+
+#bulb1 {
+    height: 48px;
+    width: 48px;
+    color: white;
+    opacity: 0.3;
+    box-shadow: var(--box-shadow);
+}
+
+#photo-1:hover .service-item {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+
+#photo-1:hover #bulb1 {
+    transition: 1s;
+    height: 54px;
+    width: 54px;
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+
+
+}
+
+/* photo 2 */
+
+#photo-2 {
+    height: 417px;
+    /* width: 352px; */
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/s16-355x420.jpg);
+}
+
+#photo-2:hover {
+    background-color: #13151f;
+    /* z-index: 3; */
+    filter: brightness(1.3);
+    -moz-transition: all .6s ease-out 0s;
+    -webkit-transition: all .6s ease-out 0s;
+    -ms-transition: all .6s ease-out 0s;
+    -o-transition: all .6s ease-out 0s;
+    transition: all .6s ease-out 0s;
+
+}
+
+#photo-2:hover .icon1 {
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transition-duration: 2s;
+
+}
+
+#photo-2:hover .icon1 img {
+    transform: rotateY(360deg);
+    transition-duration: 1s;
+}
+
+#photo-2:hover .service-item {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+
+#photo-2:hover #bulb1 {
+    transition: 1s;
+    height: 54px;
+    width: 54px;
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+
+
+}
+
+/* photo 3 */
+
+#photo-3 {
+    height: 417px;
+    /* width: 352px; */
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/s14-355x420.jpg);
+}
+
+#photo-3:hover {
+    background-color: #13151f;
+    /* z-index: 3; */
+    filter: brightness(1.3);
+    -moz-transition: all .6s ease-out 0s;
+    -webkit-transition: all .6s ease-out 0s;
+    -ms-transition: all .6s ease-out 0s;
+    -o-transition: all .6s ease-out 0s;
+    transition: all .6s ease-out 0s;
+
+}
+
+#photo-3:hover .icon1 {
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transition-duration: 2s;
+
+}
+
+.side-bulb {
+    position: relative;
+    left: 30px;
+    /* top: -20px; */
+    bottom: -10px;
+}
+
+#bulb2 {
+    height: 48px;
+    width: 48px;
+    color: white;
+    opacity: 0.3;
+    box-shadow: var(--box-shadow);
+}
+
+#photo-3:hover .icon1 img {
+    transform: rotateY(360deg);
+    transition-duration: 1s;
+}
+
+#photo-3:hover .service-item {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+
+#photo-3:hover #bulb2 {
+    transition: 1s;
+    height: 54px;
+    width: 54px;
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateX(-25px);
+    transform: translateX(-25px);
+    transform: translateX(-25px);
+    transform: translateX(-25px);
+
+
+}
+
+/* photo 4 */
+
+#photo-4 {
+    height: 417px;
+    /* width: 352px; */
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/s13-355x420.jpg);
+}
+
+#photo-4:hover {
+    background-color: #13151f;
+    /* z-index: 3; */
+    filter: brightness(1.3);
+    -moz-transition: all .6s ease-out 0s;
+    -webkit-transition: all .6s ease-out 0s;
+    -ms-transition: all .6s ease-out 0s;
+    -o-transition: all .6s ease-out 0s;
+    transition: all .6s ease-out 0s;
+
+}
+
+#photo-4:hover .icon1 {
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transform: translateY(20px);
+    transition-duration: 2s;
+
+}
+
+#photo-4:hover .icon1 img {
+    transform: rotateY(360deg);
+    transition-duration: 1s;
+}
+
+#photo-4:hover .service-item {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+
+#photo-4:hover #bulb1 {
+    transition: 1s;
+    height: 54px;
+    width: 54px;
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateY(45px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+    transform: translateX(-55px);
+
+
+}
+
+.show-all {
+    height: 44px;
+    width: 443px;
+    background-color: #0d1422;
+    margin-top: 50px;
+    position: relative;
+
+}
+
+.btn-link {
+    color: #0699e9;
+}
+
+.top-div {
+    /* content: ""; */
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: var(--webex-primary-color);
+    left: 0;
+    top: 0;
+    -moz-transition: all .3s ease-out 0s;
+    -webkit-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+
+.bottom-div {
+    /* content: ""; */
+    position: absolute;
+
+    height: 10px;
+    width: 10px;
+    background: var(--webex-primary-color);
+    right: 0;
+    bottom: 0;
+    -moz-transition: all .3s ease-out 0s;
+    -webkit-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+
+.show-all:hover .top-div {
+    height: inherit;
+    width: 10px;
+    opacity: 0.5;
+}
+
+.show-all:hover .bottom-div {
+    height: inherit;
+    width: 10px;
+    opacity: 0.5;
+}
+
+.text {
+    color: white;
+}
+
+.behind-text span {
+    -webkit-background-clip: text;
+    -webkit-text-stroke-width: 2px;
+    font-size: 120px;
+    color: #1f1d2c;
+    z-index: -1;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle1 {
+    height: 48px;
+    width: 162px;
+    background-color: #0C89CD40;
+    border-radius: 15px;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+}
+
+.subtitle1 a {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    font-size: 16px;
+    -webkit-text-fill-color: transparent;
+}
+
+.title1 {
+    font-size: 48px;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    top: -20px;
+}
+
+.process-item {
+    height: inherit;
+    padding: 0px 40px;
+    /* background-color: #69727d; */
+    width: 352px;
+}
+
+.process-icon {
+    position: relative;
+    align-items: center;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    justify-content: center;
+    background-color: #47507938;
+    box-shadow: 0px 0px 57px 0px rgba(0, 0, 0, .1);
+    height: 148px;
+    width: 148px;
+    line-height: 148px;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.process-icon::before {
+    position: absolute;
+    content: "";
+    height: 0px;
+    width: 0px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    z-index: 1;
+    transition-duration: 1s;
+}
+
+.process-icon img {
+    height: 64px;
+    width: 64px;
+}
+
+.process-count {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    border-radius: 15px 0px;
+    background: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+}
+
+.process-count .count-1 {
+    color: white;
+    font-size: 18px;
+}
+
+.process-title {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.process-text {
+    font-size: 18px;
+    color: #d3d3d3;
+}
+
+.process-item:hover .process-count {
+    background: #47507938;
+    position: absolute;
+    transition: 1s;
+
+}
+
+.process-item:hover .process-count1 {
+    color: white;
+}
+
+.process-item:hover .process-icon::before {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.work1 {
+    background: #191d345e;
+    border-top: 1px solid #0d212b;
+    border-radius: 15px;
+}
+
+.project-list {
+    height: 50px;
+    width: 100%;
+    position: relative;
+
+}
+
+.project-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 323px;
+}
+
+.work1:hover .project-title1:after {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .8s;
+
+}
+
+.project-title1:after {
+    position: absolute;
+    left: 0;
+    width: 0px;
+    margin-left: 20px;
+    height: 2px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .8s;
+}
+
+.project-list a {
+    color: #fff;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    padding: 8px 10px;
+    /* margin-left: 10px; */
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    border-radius: 3px
+}
+
+.project-thumb {
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    right: 10%;
+    top: -50%;
+    width: max-content;
+    -moz-transition: all .4s ease-out 0s;
+    -webkit-transition: all .4s ease-out 0s;
+    -ms-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: top center;
+    z-index: 3;
+
+}
+
+.work1:hover .project-thumb {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+    transform: rotateY(-20deg);
+
+    transition: 1s;
+
+}
+
+.project-thumb img {
+    height: auto;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-radius: 15px;
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg)
+}
+
+.catagory {
+    height: inherit;
+    width: 282px;
+}
+
+.project-title-shadow {
+    font-size: 64px;
+    -webkit-text-fill-color: #00426000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #224150;
+    opacity: .4;
+
+    z-index: 1;
+}
+
+.project-title-shadow1 {
+    font-size: 64px;
+    -webkit-text-fill-color: #00426000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #224150;
+    opacity: .4;
+    width: 560px;
+    z-index: 1;
+}
+
+.icon-side {
+    height: 60px;
+    width: 60px;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--gradient-color1);
+}
+
+.icon-side::before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    content: "";
+    width: 100%;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 50%;
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -moz-transition: all .3s ease-out 0s;
+    -webkit-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+    transform-origin: center;
+    z-index: 5;
+}
+
+.icon-side:hover .icon-side::before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 50%;
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -moz-transition: all .3s ease-out 0s;
+    -webkit-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+    transform-origin: center;
+}
+
+.fa-arrow-right {
+    font-size: 18px;
+}
+
+.hero4 {
+    padding: 100px 0px 100px 0px;
+    background-color: #000;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/Vector21.png);
+}
+
+.hero-col {
+    height: inherit;
+}
+
+.side-line-left {
+    height: inherit;
+    width: 70px;
+    position: relative;
+    /* background-color: white; */
+}
+
+.side-line-left span {
+    position: absolute;
+    left: 10px;
+    width: 50px;
+    /* margin-left: 20px; */
+    height: 2px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    /* content: ""; */
+    /* top: 0%; */
+    transform: translateY(-50%);
+    transition: .8s;
+
+}
+
+.side-line-left a {
+    position: absolute;
+    left: 0px;
+    width: 50px;
+    /* margin-left: 20px; */
+    height: 2px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    /* content: ""; */
+    top: 20%;
+    transform: translateY(-50%);
+    transition: .8s;
+
+}
+
+.side-text {
+    height: inherit;
+    width: 200px;
+    margin-top: -22px;
+}
+
+.side-text span {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    font-size: 18px;
+    -webkit-text-fill-color: transparent;
+}
+
+.why {
+    font-size: 48px;
+    color: white;
+}
+
+.featured-icon {
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+}
+
+.fa-user-secret {
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+}
+
+.fa-comments {
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+}
+
+.icon-details {
+    height: inherit;
+    width: 483px;
+    /* background-color: red; */
+    margin-left: 20px;
+}
+
+.icon-box-title {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.icon-box-desc {
+    color: #bdbcbf;
+}
+
+.accordian {
+    width: 100%;
+    height: 280px;
+}
+
+.accordian-item-1 {
+    border-radius: 20px;
+    background: linear-gradient(34deg, #0d8dde33, #088cca17)
+}
+
+.accordian-icon {
+    height: 40px;
+    width: 40px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+
+}
+
+.accordian-body {
+    border: 1px solid #0d212b;
+    display: none;
+    /* transition: 2s; */
+}
+
+.description {
+    font-size: 18px;
+    color: #bdbcbf;
+}
+
+.fa-arrow-right {
+    color: white;
+    z-index: 1;
+    position: absolute;
+}
+
+.fa-arrow-down {
+    z-index: -1;
+    color: white;
+    position: absolute;
+}
+
+.object-item {
+    position: relative;
+    width: 57px;
+    left: 50px;
+    top: -100px;
+    opacity: .2;
+    animation-duration: 35s;
+    animation: fullSpin infinite linear 25s;
+}
+
+.member-button {
+    height: 35px;
+    width: 162px;
+    background-color: #0C89CD40;
+    border-radius: 15px;
+
+}
+
+.member-button a {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    font-size: 16px;
+    -webkit-text-fill-color: transparent;
+}
+
+#member-1 {
+    height: 417px;
+    width: 352px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 0px;
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/team007.jpg);
+}
+
+.member-item {
+    background-color: rgba(255, 255, 255, .1);
+    height: 111px;
+    width: 352px;
+    border-radius: 15px;
+    backdrop-filter: blur(25px);
+
+}
+
+.member-subtitle {
+    font-size: 22px;
+    color: white;
+}
+
+.team-designation {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    font-size: 16px;
+    -webkit-text-fill-color: transparent;
+}
+
+.member-icon {
+    height: 40px;
+    width: 40px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+
+}
+
+.fa-share-from-square {
+    font-size: 25px;
+    color: white;
+}
+
+#member-2 {
+    height: 417px;
+    width: 352px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 0px;
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/team008.jpg);
+}
+
+#member-3 {
+    height: 417px;
+    width: 352px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 0px;
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/team006.jpg);
+}
+
+#member-4 {
+    height: 417px;
+    width: 352px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 0px;
+    /* background-color: white; */
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/team-d3.jpg);
+}
+
+.all-news {
+    height: 56px;
+    width: 176px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+#news-1 {
+    height: inherit;
+
+}
+
+.news-img {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/ai4-430x300.jpg);
+}
+
+.news-button {
+    height: 38px;
+    width: 90px;
+    position: absolute;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 10px;
+    right: 20px;
+    top: 25px;
+    color: white;
+}
+
+.news-description {
+    padding: 30px 35px;
+    height: inherit;
+}
+
+.name {
+    color: #bdbcbf;
+}
+
+.fa-user {
+    color: #0293ce;
+}
+
+.fa-calendar-days {
+    color: #0293ce;
+    margin-left: 20px;
+}
+
+.news-top-meta a {
+    text-decoration: none;
+    color: #bdbcbf;
+
+}
+
+.about-news {
+    height: 56px;
+    width: 176px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.news-img-1 {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/15-430x300.jpg);
+}
+
+.news-img-2 {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/08/news1-430x300.jpg);
+}
+
+.hero-7 {
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2024/01/Group-481785.png);
+}
+
+.contect-news {
+    height: 56px;
+    width: 278px;
+    background-image: linear-gradient(211deg, #0699e9 0%, #0dd1ab 100%);
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+footer {
+    opacity: 0.95;
+
+    background-image: linear-gradient(#0f1119, transparent, #0f1119), url(//webextheme.com/wp/nextech/wp-content/themes/nextech/assets/css/../images/bg/footer-bg.jpg);
+}
+
+.line {
+    height: 4px;
+    border-radius: 5px;
+    width: 54px;
+    background-color: var(--webex-primary-color);
+}
+
+.email {
+    background-color: #13151f;
+}
+
+input {
+    background-color: #13151f;
+    outline: none;
+    padding: 15px;
+    color: white;
+}
+
+
+
+.ri-arrow-right-line {
+    color: var(--webex-primary-color);
+    font-size: 24px;
+}
+
+.arrows a {
+    color: #bbb7c2;
+    text-decoration: none;
+}
+
+.fa-phone {
+    color: #bbb7c2;
+
+}
+
+.arrows1 {
+    color: #bbb7c2;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.arrows1 a {
+    color: #bbb7c2;
+    text-decoration: none;
+}
+
+.fa-envelope {
+    color: #bbb7c2;
+}
+
+.fa-globe {
+    color: #bbb7c2;
+}
+
+@keyframes pulse {
+
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(.95, .95, .95);
+        transform: scale3d(.95, .95, .95);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fullSpin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+
+
+.tilt-box-wrap {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    right: -150px;
+    top: 260px;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+}
+
+.tilt-box-wrap:hover {
+    transition: all 0.3s linear;
+}
+
+.t_over {
+    width: 33.333%;
+    height: 33.333%;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.t_over:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.t_over:nth-child(2) {
+    left: 33.333%;
+    top: 0;
+}
+
+.t_over:nth-child(3) {
+    left: 66.666%;
+    top: 0;
+}
+
+.t_over:nth-child(4) {
+    left: 0;
+    top: 33.333%;
+}
+
+.t_over:nth-child(5) {
+    left: 33.333%;
+    top: 33.333%;
+}
+
+.t_over:nth-child(6) {
+    left: 66.666%;
+    top: 33.333%;
+}
+
+.t_over:nth-child(7) {
+    left: 0;
+    top: 66.666%;
+}
+
+.t_over:nth-child(8) {
+    left: 33.333%;
+    top: 66.666%;
+}
+
+.t_over:nth-child(9) {
+    left: 66.666%;
+    top: 66.666%;
+}
+
+
+
+
+.t_over:nth-child(1):hover~.tilt-box {
+    transform: rotateX(-10deg) rotateY(10deg);
+}
+
+.t_over:nth-child(2):hover~.tilt-box {
+    transform: rotateX(-10deg) rotateY(0deg);
+}
+
+.t_over:nth-child(3):hover~.tilt-box {
+    transform: rotateX(-10deg) rotateY(-10deg);
+}
+
+.t_over:nth-child(4):hover~.tilt-box {
+    transform: rotateX(0deg) rotateY(10deg);
+}
+
+.t_over:nth-child(5):hover~.tilt-box {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.t_over:nth-child(6):hover~.tilt-box {
+    transform: rotateX(0deg) rotateY(-10deg);
+}
+
+.t_over:nth-child(7):hover~.tilt-box {
+    transform: rotateX(10deg) rotateY(10deg);
+}
+
+.t_over:nth-child(8):hover~.tilt-box {
+    transform: rotateX(10deg) rotateY(0deg);
+}
+
+.t_over:nth-child(9):hover~.tilt-box {
+    transform: rotateX(10deg) rotateY(-10deg);
+}
+
+
+
+
+.tilt-box {
+    width: 100%;
+    height: 100%;
+    background: #04527b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    font-size: 90px;
+    transition: all 0.6s ease-out;
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.tilt-box strong {
+    transform: translateZ(40px);
+}
+
+.img2 {
+    height: 295px;
+    width: 295px;
+    border-radius: 15px;
+    background-image: url(https://webextheme.com/wp/nextech/wp-content/uploads/2023/12/16-300x300.jpg);
+}
+
+@media(min-width:0px) and (max-width:800px) {
+    .side-img {
+        display: none;
+    }
+}
